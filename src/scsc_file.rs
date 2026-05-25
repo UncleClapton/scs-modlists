@@ -16,7 +16,9 @@ use flate2::read::ZlibDecoder;
 /// After decryption and decompression, the data might be in BSII format (binary
 /// form) or SIIN format (textual form).
 pub struct ScscFile<'a> {
+    #[allow(dead_code)]
     pub(crate) header: &'a [u8], // ScsC, size 4
+    #[allow(dead_code)]
     pub(crate) hmac: &'a [u8],   // size 32
     pub(crate) iv: &'a [u8],     // size 16
     pub(crate) size: u32,
