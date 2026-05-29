@@ -4,18 +4,9 @@ use crate::ets2::analyze_save_to_json;
 use crate::file_type::decode_until_siin;
 
 #[wasm_bindgen]
-pub fn decode(input: &[u8]) -> Result<String, JsError> {
+pub fn decode(input: &[u8]) -> Result<Vec<u8>, JsError> {
     match decode_until_siin(input) {
-        Ok(decoded) => {
-            let decoded_str = String::from_utf8(decoded)
-                .map_err(|_| JsError::new("Failed to convert to UTF-8"))?;
-            Ok(decoded_str)
-        }
+        Ok(decoded) => Ok(decoded),
         Err(err) => Err(JsError::new(&format!("Decoding error: {}", err))),
     }
-}
-
-#[wasm_bindgen]
-pub fn analyze_ets2_save(input: &[u8]) -> Result<String, JsError> {
-    analyze_save_to_json(input).map_err(|err| JsError::new(&err.to_string()))
 }
