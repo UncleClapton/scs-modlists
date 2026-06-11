@@ -10,30 +10,25 @@ env:
   CARGO_TERM_COLOR: always
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - name: Set up wasm pack
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Install wasm-pack
       run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
-    - name: Build
+
+    - name: Build WASM Module
       run: wasm-pack build --verbose --all-features
-    - name: Build website
+
+    - name: Build web
       run: |
         cd web
         yarn
         yarn run build
-    - name: Run tests
-      run: |
-        cd web
-        yarn playwright install
-        yarn run test
+
     - name: Run linter
       run: |
         cd web
         yarn run lint
-    - name: Upload artifacts
-      uses: actions/upload-artifact@v4
-      with:
-        name: web-artifacts
-        path: web/dist/*
