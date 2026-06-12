@@ -26,7 +26,7 @@ The decoder supports three 4-byte file headers:
   parser, and textual output formatter.
 - `src/wasm.rs`: `wasm-bindgen` API behind the `wasm` feature.
 - `tests/wasm.rs`: browser wasm tests, compiled only with `--features wasm`.
-- `web/`: React 19/Vite UI. `web/src/decode.worker.ts` calls the wasm package
+- `web/`: React 19/Vite UI. `web/src/lib/workers/decode.worker.ts` calls the wasm package
   from a worker so large decodes do not block the UI.
 
 ## Rust Commands
@@ -95,11 +95,6 @@ present and current.
 
 ## Verification Guidance
 
-- For parser or output changes, run at least `cargo test`; add
-  `cargo test --all-features` if wasm-facing code might be affected.
-- For wasm API changes, run `wasm-pack test --chrome --headless --all-features`
-  when a browser is available.
-- For web UI changes, run `yarn test` from `web/`; run `yarn build` after
-  rebuilding `../pkg` when the wasm package or Vite integration is involved.
 - Keep generated build artifacts such as `target/`, `pkg/`, and web build
   outputs out of commits unless the user explicitly asks for them.
+- Do not run diagnostics, lint, typecheck, tests, or build commands unless the user explicitly asks.

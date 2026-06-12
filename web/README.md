@@ -5,21 +5,21 @@
 1. Install `wasm-pack`
 
    ```bash
-   $ cargo install wasm-pack
+   cargo install wasm-pack
    ```
 
 1. Build Web Assembly package (in project root directory)
 
    ```bash
-   $ wasm-pack build --all-features
+   wasm-pack build --all-features
    ```
 
 1. Register the built package for development
 
    ```bash
-   $ cd pkg
-   $ yarn link
-   $ cd ..
+   cd pkg
+   yarn link
+   cd ..
    ```
 
 1. The Web Assembly package should be available at `pkg` directory. Enter the
@@ -27,13 +27,13 @@
    package so that any changes can be picked up.
 
    ```bash
-   $ cd web
-   $ yarn link sii-decode-rs
-   $ yarn
+   cd web
+   yarn link sii-decode-rs
+   yarn
    ```
 
 1. The development server can be started via:
 
    ```bash
-   $ yarn dev
+   yarn dev
    ```

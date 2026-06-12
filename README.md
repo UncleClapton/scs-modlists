@@ -1,19 +1,30 @@
-# A Rust library to decode SII files
+# SCS ModList Utility
 
-This library provides functionalities to decode SII files ("Unit serialized
-file") that are used in SCS Software games (e.g. Euro Truck Simulator 2).
+A toolbox for creating and applying sharable mod lists for Euro Truck Simulator 2 and American Truck Simulator.
 
-This library is ported from existing SII decrypt software by [František
-Milt (SII_Decrypt)](https://github.com/TheLazyTomcat/SII_Decrypt) and [Joshua
-Menzel (sii-decryptsharp)](https://gitlab.com/jammerxd/sii-decryptsharp).
-Many thanks for their investigation and implementation work.
+## Motivation
 
-This library is also available in an executable format that takes a file of an
-supported format and outputs the decrypted/decoded result.
+When players of ETS2/ATS want to play together in convoy mode, all players must have 100% identical mod lists in both contents and load order. When using large numbers of mods, synchronizing mods between players can become tedious and error-prone.
 
-## Usage
+## How to Use
 
-You can use the web interface at https://sii-decode.github.io/
+You can use the web interface at <https://uncleclapton.github.io/scs-modlists>
+
+**More in depth documentation on using the tool is coming soon.**
+
+In short, however. the "Create ModList" tab allows you to create your own mod list file from your user profile. Find and upload your `profile.sii` file for your save, and fill in the list details as desired.
+
+This mod list can then be shared with other players, who can use the "Apply ModList" tab to apply the mod list to their own `profile.sii` files.
+
+This will synchronize the mods active between the players, but will not synchronize the mod files themselves. Each player will still need to obtain the mod files, and subscribe to the same workshop mods themselves.
+
+**IMPORTANT**: Never share your `profile.sii` files directly between each other. This file contains the login credentials to your World of Trucks account, if you have one linked. This tool process the file entirely within your browser, and never shares the file with any server, including Github.
+
+## Acknowledgements
+
+This project would not have been possible without the hard work of the SCS Modding Community. In particular, thanks to [Fangyi Zhou (sii-decode-rs)](https://github.com/fangyi-zhou/sii-decode-rs) for the Rust WASM module, as well as the web interface of which this project is a fork of.
+
+Additionally, thanks to [František Milt (SII_Decrypt)](https://github.com/TheLazyTomcat/SII_Decrypt) and [Joshua Menzel (sii-decryptsharp)](https://gitlab.com/jammerxd/sii-decryptsharp) for their work on their respective decoding tools, which aided the development of the rust implementation.
 
 ## Technical Notes
 

@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.title {
+  margin: 0;
+}
+
+.tabs {
+  display: inline-flex;
+  gap: 4px;
+  border: 1px solid #c8d0dc;
+  border-radius: 8px;
+  padding: 4px;
+  background: #f5f7fa;
+}
+
+.button {
+  border: 0;
+  border-radius: 6px;
+  padding: 8px 12px;
+  background: transparent;
+  color: #263241;
+}
+
+.buttonActive {
+  background: #1f2937;
+  color: #fff;
+}
+
+@media (max-width: 925px) {
+  .container {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .tabs {
+    width: 100%;
+  }
+
+  .button {
+    flex: 1;
+  }
+}

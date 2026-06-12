@@ -1,0 +1,19 @@
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  text-align: left;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.message {
+  font-size: 0.92rem;
+  line-height: 1.35;
+}

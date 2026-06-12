@@ -1,0 +1,57 @@
+.modItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  border: 1px solid #dbe2ee;
+  border-radius: 8px;
+  background: #f8fafc;
+  padding: 0.6rem 0.75rem;
+
+}
+
+.modItem.draggable {
+  cursor: grab;
+}
+
+.modItem.draggable:active {
+  cursor: grabbing;
+}
+
+.modItemDragging {
+  opacity: 0.65;
+}
+
+.modItemDropTarget {
+  border-color: #5275b9;
+  box-shadow: 0 0 0 2px rgba(82, 117, 185, 0.15);
+}
+
+.modTitle {
+  margin: 0;
+  color: #152033;
+  font-weight: 600;
+}
+
+.modId {
+  margin: 0.2rem 0 0;
+  color: #55637a;
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    "Liberation Mono",
+    "Courier New",
+    monospace;
+  font-size: 0.7rem;
+}
+
+
+@media (max-width: 925px) {
+  .modItem {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

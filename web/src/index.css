@@ -41,6 +41,7 @@ button {
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
+  color: #fff;
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -52,4 +53,52 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+
+code.inline {
+  background-color: #e2e2e2;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
+
+textarea {
+  box-sizing: border-box;
+  min-height: 420px;
+  width: 100%;
+  resize: vertical;
+  border: 1px solid #c8d0dc;
+  border-radius: 8px;
+  padding: 12px;
+  font:
+    13px/1.45 ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    "Liberation Mono",
+    "Courier New",
+    monospace;
+}
+
+#root {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 24px;
+}
+@media (max-width: 925px) {
+  #root {
+    padding: 16px;
+  }
+}
+
+.app-shell {
+  display: flex;
+  min-height: calc(100vh - 48px);
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer {
+  color: #697386;
 }

@@ -1,0 +1,144 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  color: #0d1b2a;
+}
+
+.subtitle {
+  margin: 0;
+  color: #546177;
+  font-size: 0.92rem;
+}
+
+.form {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #24324b;
+}
+
+.input,
+.textarea {
+
+  border: 1px solid #c8d0dc;
+  border-radius: 8px;
+  padding: 0.58rem 0.68rem;
+  font: inherit;
+  color: #1b2a41;
+  background: #ffffff;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 6rem;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: 2px solid rgba(29, 78, 216, 0.2);
+  border-color: #64748b;
+}
+
+.twoCol {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0.9rem;
+}
+
+.fieldset {
+  margin: 0;
+  border: 1px solid #dbe2ee;
+  border-radius: 8px;
+  padding: 0.55rem 0.65rem 0.7rem;
+}
+
+.radioRow {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.radioLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: #25324a;
+  font-size: 0.92rem;
+}
+
+.modsHeadingRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.modsHeading {
+  font-weight: 600;
+  color: #152033;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.45rem;
+  padding: 0.15rem 0.45rem;
+  border: 1px solid #dbe2ee;
+  border-radius: 999px;
+  background: #f8fafc;
+  color: #334155;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.modsList {
+  list-style: none;
+  display: grid;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0;
+}
+
+.emptyState {
+  margin: 0;
+  padding: 0.65rem 0.75rem;
+  border: 1px dashed #c6d1e4;
+  border-radius: 8px;
+  color: #5c6c84;
+  background: #f9fbfe;
+}
+
+.actionRow {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 925px) {
+  .twoCol {
+    grid-template-columns: 1fr;
+  }
+}
