@@ -1,4 +1,4 @@
-name: Website
+name: Test Build
 
 on:
   push:

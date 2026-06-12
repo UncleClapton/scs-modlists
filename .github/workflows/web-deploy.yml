@@ -1,7 +1,8 @@
-name: Deploy to GitHub Pages
+name: GitHub Pages Deployment
 
 on:
-  workflow_dispatch:
+  push:
+    branches: [ "main" ]
 
 env:
   CARGO_TERM_COLOR: always
@@ -10,7 +11,7 @@ permissions:
   contents: write
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
