@@ -53,9 +53,11 @@ function App() {
         }
         <br />
         {"This tool is "}
-        <a href="https://github.com/uncleclapton/scs-mltu/">{"open source"}</a>
+        <a href="https://github.com/uncleclapton/scs-modlists/">
+          {"open source"}
+        </a>
         {". If you encounter any issues, please report them "}
-        <a href="https://github.com/uncleclapton/scs-mltu/issues">
+        <a href="https://github.com/uncleclapton/scs-modlists/issues">
           {"on GitHub"}
         </a>
         {"."}
