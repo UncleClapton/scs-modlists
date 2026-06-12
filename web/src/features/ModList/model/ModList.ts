@@ -353,7 +353,7 @@ const modArray = {
     return siiT.fixedArrayAttribute(
       ACTIVE_MODS_ATTR,
       mods.length,
-      mods
+      [...mods]
         // re-reverse to write in reverse order in file, as that's the order the game loads mods in.
         .reverse()
         .map((mod, index) =>
